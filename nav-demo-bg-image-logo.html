@@ -98,41 +98,41 @@
              css/logo-bg-image.css. For the two-<img>-upload version instead,
              open index.html (uses css/logo-dual-img.css). -->
         <nav id="eco-primary-nav" class="navbar navbar-expand-lg fixed-top py-3 px-md-0 px-4  navbar-dark bg-transparent">
-            <div class="container">
+            <div class="container eco-nav-container" id="eco-nav-container">
 
                 <!-- Col 1: Logo + cross-event dropdown caret + toggler (toggler only shown here below md) -->
-                <div class="d-flex align-items-center justify-content-between flex-grow-1 flex-md-grow-0 eco-nav-col eco-nav-col-logo">
-                    <a href="index.php" class="navbar-brand">Bootstrap 5 ECO2 Template</a>
-                    <button class="navbar-toggler ms-3 d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#primary-nav" aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="d-flex align-items-center justify-content-between flex-grow-1 flex-md-grow-0 eco-nav-col eco-nav-col-logo" id="eco-nav-col-logo">
+                    <a href="index.php" class="navbar-brand eco-nav-logo-link" id="eco-nav-logo-link">Bootstrap 5 ECO2 Template</a>
+                    <button class="navbar-toggler ms-3 d-md-none eco-nav-toggler eco-nav-toggler-logo" id="eco-nav-toggler-logo" type="button" data-bs-toggle="collapse" data-bs-target="#primary-nav" aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                 </div>
 
-                <!-- Col 3: CTAs (stretch to fill the row + split 50/50 below md) + mobile toggler (md-lg only; hidden below md since it lives in Col 1 there, hidden at lg+ by navbar-expand-lg) -->
-                <div class="d-flex align-items-center justify-content-end order-lg-3 flex-grow-1 flex-lg-grow-0 eco-nav-col eco-nav-col-ctas">
-                    <ul class="navbar-nav flex-row gap-2 flex-fill flex-md-grow-0">
-                        <li class="nav-item flex-fill flex-md-grow-0">
+                <!-- Col 3: CTAs (stretch to fill the row + split evenly below md; add/remove <li class="eco-nav-cta"> items freely, flex-fill shares the row among however many are present) + mobile toggler (md-lg only; hidden below md since it lives in Col 1 there, hidden at lg+ by navbar-expand-lg) -->
+                <div class="d-flex align-items-center justify-content-end order-lg-3 flex-grow-1 flex-lg-grow-0 eco-nav-col eco-nav-col-ctas" id="eco-nav-col-ctas">
+                    <ul class="navbar-nav flex-row gap-2 flex-fill flex-md-grow-0 eco-nav-ctas" id="eco-nav-ctas">
+                        <li class="nav-item flex-fill flex-md-grow-0 eco-nav-cta">
                             <a class="nav-link p-0" href="#">
                                 <span class="btn btn-sm btn-primary d-block  text-white">View Program</span>
                             </a>
                         </li>
-                        <li class="nav-item flex-fill flex-md-grow-0">
+                        <li class="nav-item flex-fill flex-md-grow-0 eco-nav-cta">
                             <a class="nav-link p-0" href="#">
                                 <span class="btn btn-sm btn-danger d-block   text-white">Register Now +</span>
                             </a>
                         </li>
                     </ul>
-                    <button class="navbar-toggler ms-3 d-none d-md-block d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#primary-nav" aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler ms-3 d-none d-md-block d-lg-none eco-nav-toggler eco-nav-toggler-ctas" id="eco-nav-toggler-ctas" type="button" data-bs-toggle="collapse" data-bs-target="#primary-nav" aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                 </div>
 
                 <!-- Col 2: Navigation items (own row below lg, inline between Col 1 and Col 3 at lg+) -->
                 <div class="navbar-collapse collapse mt-3 mt-lg-0 eco-nav-col eco-nav-col-items" id="primary-nav" style="">
-                    <ul class="navbar-nav mx-lg-auto">
-                        <li class="nav-item dropdown text-center text-lg-start">
+                    <ul class="navbar-nav mx-lg-auto eco-nav-items" id="eco-nav-items">
+                        <li class="nav-item dropdown text-center text-lg-start eco-nav-item eco-nav-item-agenda" id="eco-nav-item-agenda">
                             <a class="nav-link dropdown-toggle mx-0 mx-lg-1 text-uppercase fw-semibold" href="#" data-bs-toggle="dropdown" aria-expanded="false">Agenda</a>
-                            <ul class="dropdown-menu">
+                            <ul class="dropdown-menu eco-nav-dropdown eco-nav-dropdown-agenda" id="eco-nav-dropdown-agenda">
                                 <li class="my-1">
                                     <a class="dropdown-item" href="#">Download Agenda</a>
                                 </li>
@@ -141,9 +141,9 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-item dropdown text-center text-lg-start">
+                        <li class="nav-item dropdown text-center text-lg-start eco-nav-item eco-nav-item-speakers" id="eco-nav-item-speakers">
                             <a class="nav-link dropdown-toggle mx-0 mx-lg-1 text-uppercase fw-semibold" href="#" data-bs-toggle="dropdown" aria-expanded="false">Speakers</a>
-                            <ul class="dropdown-menu">
+                            <ul class="dropdown-menu eco-nav-dropdown eco-nav-dropdown-speakers" id="eco-nav-dropdown-speakers">
                                 <li class="my-1">
                                     <a class="dropdown-item" href="#">Our Speakers</a>
                                 </li>
@@ -152,9 +152,9 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-item dropdown text-center text-lg-start">
+                        <li class="nav-item dropdown text-center text-lg-start eco-nav-item eco-nav-item-sponsors" id="eco-nav-item-sponsors">
                             <a class="nav-link dropdown-toggle mx-0 mx-lg-1 text-uppercase fw-semibold" href="#" data-bs-toggle="dropdown" aria-expanded="false">Sponsors</a>
-                            <ul class="dropdown-menu">
+                            <ul class="dropdown-menu eco-nav-dropdown eco-nav-dropdown-sponsors" id="eco-nav-dropdown-sponsors">
                                 <li class="my-1">
                                     <a class="dropdown-item" href="sponsors.php">Our Sponsors</a>
                                 </li>
@@ -163,12 +163,12 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-item dropdown text-center text-lg-start">
+                        <li class="nav-item dropdown text-center text-lg-start eco-nav-item eco-nav-item-attendee-list" id="eco-nav-item-attendee-list">
                             <a class="nav-link mx-0 mx-lg-1 text-uppercase fw-semibold" href="#" data-bs-toggle="dropdown" aria-expanded="false">Attendee List</a>
                         </li>
-                        <li class="nav-item dropdown text-center text-lg-start">
+                        <li class="nav-item dropdown text-center text-lg-start eco-nav-item eco-nav-item-content" id="eco-nav-item-content">
                             <a class="nav-link dropdown-toggle mx-0 mx-lg-1 text-uppercase fw-semibold" href="#" data-bs-toggle="dropdown" aria-expanded="false">Content</a>
-                            <ul class="dropdown-menu">
+                            <ul class="dropdown-menu eco-nav-dropdown eco-nav-dropdown-content" id="eco-nav-dropdown-content">
                                 <li class="my-1">
                                     <a class="dropdown-item" href="#">Downloads</a>
                                 </li>
@@ -186,9 +186,9 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-item dropdown text-center text-lg-start">
+                        <li class="nav-item dropdown text-center text-lg-start eco-nav-item eco-nav-item-about" id="eco-nav-item-about">
                             <a class="nav-link dropdown-toggle mx-0 mx-lg-1 text-uppercase fw-semibold" href="#" data-bs-toggle="dropdown" aria-expanded="false">About</a>
-                            <ul class="dropdown-menu">
+                            <ul class="dropdown-menu eco-nav-dropdown eco-nav-dropdown-about" id="eco-nav-dropdown-about">
                                 <li class="my-1">
                                     <a class="dropdown-item" href="#">About Us</a>
                                 </li>

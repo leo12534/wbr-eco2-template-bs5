@@ -45,6 +45,22 @@ body {background:#fbfbfb; color: var(--event-header-color); font-family: var(--e
  Logo sizing/swap CSS lives in its own stylesheet, not here, since there are
  two interchangeable versions depending on what the CMS can output for a
  given event - see css/logo-dual-img.css and css/logo-bg-image.css.
+
+ Per-event customization hooks (id unless noted, all also carry a matching
+ class of the same name so they can be targeted by either):
+   #eco-nav-container        - .container row wrapper directly inside <nav>
+   #eco-nav-col-logo/-ctas   - the 3 flex sections above (col-items already
+                                has its own functional id, #primary-nav)
+   #eco-nav-logo-link        - the <a class="navbar-brand"> itself
+   #eco-nav-toggler-logo/-ctas - the two responsive toggler buttons
+   #eco-nav-ctas             - the CTA <ul>; each <li> is class="eco-nav-cta"
+                                only (no per-button id/class) since CTAs vary
+                                in count, order and content per event - style
+                                by position (nth-child) if ever needed, not by
+                                a name that won't match next event's buttons
+   #eco-nav-items            - the nav-items <ul>
+   #eco-nav-item-*           - each top-level nav <li> (agenda, speakers, ...)
+   #eco-nav-dropdown-*       - each item's .dropdown-menu <ul>
 ********************************/
 #eco-primary-nav {transition:all 0.5s ease;}
 
