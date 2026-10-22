@@ -20,47 +20,17 @@ Author URI: https://github.com/jvining
 /********************************
  Global
 ********************************/
-html, body {overflow-x:hidden; width:100vw; min-width: 400px; min-height:600px; height: 100%;}
+html, body {overflow-x:hidden; width:100vw; min-height:600px; height: 100%;}
 html, body.modal-open {overflow-x:unset; padding-right:unset!important;}
 body {background:#fbfbfb; color: var(--event-header-color); font-family: var(--event-font-secondary); }
  
  
 /********************************
  Primary Navigation
-
- 3 flex sections inside #eco-primary-nav .container, in DOM order:
-   .eco-nav-col-logo  - logo + cross-event caret + toggler #1 (col 1)
-   .eco-nav-col-ctas  - CTA buttons + toggler #2 (col 3, reordered via order-lg-3)
-   .eco-nav-col-items - #primary-nav collapse, nav item dropdowns (col 2)
- Row splitting below lg and column widths/order above lg are handled entirely
- by Bootstrap's navbar-expand-lg + order-lg-3 utilities - no custom breakpoints here.
-
- Two toggler buttons both target #primary-nav (Bootstrap's collapse JS keeps
- aria-expanded in sync across every trigger for the same target), since a
- single element can't visually relocate between two different flex-item
- wrappers at a breakpoint: toggler #1 (in col 1, next to the logo) shows only
- below md; toggler #2 (in col 3, with the CTAs) shows only md-lg, then
- navbar-expand-lg's own rule hides the whole toggler concept at lg+.
-
- Logo sizing/swap CSS lives in its own stylesheet, not here, since there are
- two interchangeable versions depending on what the CMS can output for a
- given event - see css/logo-dual-img.css and css/logo-bg-image.css.
-
- Per-event customization hooks (id unless noted, all also carry a matching
- class of the same name so they can be targeted by either):
-   #eco-nav-container        - .container row wrapper directly inside <nav>
-   #eco-nav-col-logo/-ctas   - the 3 flex sections above (col-items already
-                                has its own functional id, #primary-nav)
-   #eco-nav-logo-link        - the <a class="navbar-brand"> itself
-   #eco-nav-toggler-logo/-ctas - the two responsive toggler buttons
-   #eco-nav-ctas             - the CTA <ul>; each <li> is class="eco-nav-cta"
-                                only (no per-button id/class) since CTAs vary
-                                in count, order and content per event - style
-                                by position (nth-child) if ever needed, not by
-                                a name that won't match next event's buttons
-   #eco-nav-items            - the nav-items <ul>
-   #eco-nav-item-*           - each top-level nav <li> (agenda, speakers, ...)
-   #eco-nav-dropdown-*       - each item's .dropdown-menu <ul>
+ 3 sections: logo, nav items, CTAs. Layout handled by navbar-expand-lg + order-lg-3.
+ Two togglers both open #primary-nav: one by the logo (below md), one by the CTAs (md-lg).
+ Logo CSS: css/logo-dual-img.css or css/logo-bg-image.css, depending on what the CMS outputs.
+ Per-event hooks: #eco-nav-item-*, #eco-nav-dropdown-*, .eco-nav-cta
 ********************************/
 #eco-primary-nav {transition:all 0.5s ease;}
 
@@ -69,7 +39,7 @@ body {background:#fbfbfb; color: var(--event-header-color); font-family: var(--e
 #eco-primary-nav .dropdown>.dropdown-toggle:active {pointer-events: none;}
 
 /* Primary Nav Mobile Dropdown */
-@media(max-width:990px){ #eco-primary-nav.bg-transparent .navbar-collapse.collapse.show,  #eco-primary-nav.bg-transparent .navbar-collapse.collapsing{background:#fbfbfb; border: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important; box-shadow: var(--bs-box-shadow) !important; padding:1em; border-radius: calc(.75rem - 1px)!important;} #eco-primary-nav.bg-transparent #primary-nav.navbar-collapse.collapse.show li.nav-item a,  #eco-primary-nav.bg-transparent #primary-nav.navbar-collapse.collapsing li.nav-item a {color:#333;}}
+@media(max-width:990px){ #eco-primary-nav.bg-transparent .navbar-collapse.collapse.show,  #eco-primary-nav.bg-transparent .navbar-collapse.collapsing{background:#fbfbfb; border: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important; box-shadow: var(--bs-box-shadow) !important; padding:1em; border-radius: calc(.75rem - 1px)!important; --bs-navbar-color:#333; --bs-navbar-hover-color:#333; --bs-navbar-active-color:#333;}}
 
 /* Removes Dropdown Carets */
 #eco-primary-nav .dropdown-toggle::after {display: none;}

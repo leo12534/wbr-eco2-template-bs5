@@ -3,7 +3,7 @@
 
 <head>
     <!-- jQuery -->
-    <script rel="script" type="text/javascript" src="js/jquery.min.js"></script>
+    <script rel="script" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha384-1H217gwSVyLSIfaLxHbE7dRb3v4mYCKbpQvzx0cegeju1MVsGrX5xXxAvs/HgeFs" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- Title -->
     <title>Bootstrap 5 ECO2 Template</title>
     <!-- Meta -->
@@ -19,10 +19,10 @@
     <meta property="og:description" content="Missing site slogan" />
     <meta property="og:image" content="https://placehold.co/600x315/563d7c/ffffff?text=https://github.com/jvining" />
     <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap.min.css" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" type="text/css" href="css/open-sans.css">
-    <link rel="stylesheet" type="text/css" href="css/fontawesome.min.css">
-    <link rel="stylesheet" type="text/css" href="css/slick.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha384-qrALq7+6jBOZIQsNnT6xGkMDru64qD6uTlDra39xrt2SoXl4pO3FX6Roz/RpR/BS" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" integrity="sha384-MUdXdzn1OB/0zkr4yGLnCqZ/n9ut5N7Ifes9RP2d5xKsTtcPiuiwthWczWuiqFOn" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" type="text/css" href="css/base.css">
     <link rel="stylesheet" type="text/css" href="css/logo-dual-img.css">
     <link rel="stylesheet" type="text/css" href="style.css">
@@ -112,16 +112,16 @@
                 </div>
 
                 <!-- Col 3: CTAs (stretch to fill the row + split evenly below md; add/remove <li class="eco-nav-cta"> items freely, flex-fill shares the row among however many are present) + mobile toggler (md-lg only; hidden below md since it lives in Col 1 there, hidden at lg+ by navbar-expand-lg) -->
-                <div class="d-flex align-items-center justify-content-end order-lg-3 flex-grow-1 flex-lg-grow-0 eco-nav-col eco-nav-col-ctas" id="eco-nav-col-ctas">
+                <div class="col-12 col-md-auto pt-2 pt-md-0 d-flex align-items-center justify-content-end order-lg-3 flex-grow-1 flex-lg-grow-0 eco-nav-col eco-nav-col-ctas" id="eco-nav-col-ctas">
                     <ul class="navbar-nav flex-row gap-2 flex-fill flex-md-grow-0 eco-nav-ctas" id="eco-nav-ctas">
                         <li class="nav-item flex-fill flex-md-grow-0 eco-nav-cta">
                             <a class="nav-link p-0" href="#">
-                                <span class="btn btn-sm btn-primary d-block  text-white">View Program</span>
+                                <span class="btn btn-primary py-2 px-3 lh-1 d-block text-white">View Program</span>
                             </a>
                         </li>
                         <li class="nav-item flex-fill flex-md-grow-0 eco-nav-cta">
                             <a class="nav-link p-0" href="#">
-                                <span class="btn btn-sm btn-danger d-block   text-white">Register Now +</span>
+                                <span class="btn btn-danger py-2 px-3 lh-1 d-block text-white">Register Now +</span>
                             </a>
                         </li>
                     </ul>
@@ -134,7 +134,7 @@
                 <div class="navbar-collapse collapse mt-3 mt-lg-0 eco-nav-col eco-nav-col-items" id="primary-nav" style="">
                     <ul class="navbar-nav mx-lg-auto eco-nav-items" id="eco-nav-items">
                         <li class="nav-item dropdown text-center text-lg-start eco-nav-item eco-nav-item-agenda" id="eco-nav-item-agenda">
-                            <a class="nav-link dropdown-toggle mx-0 mx-lg-1 text-uppercase fw-semibold" href="#" data-bs-toggle="dropdown" aria-expanded="false">Agenda</a>
+                            <a class="nav-link dropdown-toggle me-lg-1 text-uppercase fw-semibold" href="#" data-bs-toggle="dropdown" aria-expanded="false">Agenda</a>
                             <ul class="dropdown-menu eco-nav-dropdown eco-nav-dropdown-agenda" id="eco-nav-dropdown-agenda">
                                 <li class="my-1">
                                     <a class="dropdown-item" href="#">Download Agenda</a>
@@ -145,7 +145,7 @@
                             </ul>
                         </li>
                         <li class="nav-item dropdown text-center text-lg-start eco-nav-item eco-nav-item-speakers" id="eco-nav-item-speakers">
-                            <a class="nav-link dropdown-toggle mx-0 mx-lg-1 text-uppercase fw-semibold" href="#" data-bs-toggle="dropdown" aria-expanded="false">Speakers</a>
+                            <a class="nav-link dropdown-toggle me-lg-1 text-uppercase fw-semibold" href="#" data-bs-toggle="dropdown" aria-expanded="false">Speakers</a>
                             <ul class="dropdown-menu eco-nav-dropdown eco-nav-dropdown-speakers" id="eco-nav-dropdown-speakers">
                                 <li class="my-1">
                                     <a class="dropdown-item" href="#">Our Speakers</a>
@@ -156,7 +156,7 @@
                             </ul>
                         </li>
                         <li class="nav-item dropdown text-center text-lg-start eco-nav-item eco-nav-item-sponsors" id="eco-nav-item-sponsors">
-                            <a class="nav-link dropdown-toggle mx-0 mx-lg-1 text-uppercase fw-semibold" href="#" data-bs-toggle="dropdown" aria-expanded="false">Sponsors</a>
+                            <a class="nav-link dropdown-toggle me-lg-1 text-uppercase fw-semibold" href="#" data-bs-toggle="dropdown" aria-expanded="false">Sponsors</a>
                             <ul class="dropdown-menu eco-nav-dropdown eco-nav-dropdown-sponsors" id="eco-nav-dropdown-sponsors">
                                 <li class="my-1">
                                     <a class="dropdown-item" href="sponsors.php">Our Sponsors</a>
@@ -167,10 +167,10 @@
                             </ul>
                         </li>
                         <li class="nav-item dropdown text-center text-lg-start eco-nav-item eco-nav-item-attendee-list" id="eco-nav-item-attendee-list">
-                            <a class="nav-link mx-0 mx-lg-1 text-uppercase fw-semibold" href="#" data-bs-toggle="dropdown" aria-expanded="false">Attendee List</a>
+                            <a class="nav-link me-lg-1 text-uppercase fw-semibold" href="#" data-bs-toggle="dropdown" aria-expanded="false">Attendee List</a>
                         </li>
                         <li class="nav-item dropdown text-center text-lg-start eco-nav-item eco-nav-item-content" id="eco-nav-item-content">
-                            <a class="nav-link dropdown-toggle mx-0 mx-lg-1 text-uppercase fw-semibold" href="#" data-bs-toggle="dropdown" aria-expanded="false">Content</a>
+                            <a class="nav-link dropdown-toggle me-lg-1 text-uppercase fw-semibold" href="#" data-bs-toggle="dropdown" aria-expanded="false">Content</a>
                             <ul class="dropdown-menu eco-nav-dropdown eco-nav-dropdown-content" id="eco-nav-dropdown-content">
                                 <li class="my-1">
                                     <a class="dropdown-item" href="#">Downloads</a>
@@ -190,7 +190,7 @@
                             </ul>
                         </li>
                         <li class="nav-item dropdown text-center text-lg-start eco-nav-item eco-nav-item-about" id="eco-nav-item-about">
-                            <a class="nav-link dropdown-toggle mx-0 mx-lg-1 text-uppercase fw-semibold" href="#" data-bs-toggle="dropdown" aria-expanded="false">About</a>
+                            <a class="nav-link dropdown-toggle me-lg-1 text-uppercase fw-semibold" href="#" data-bs-toggle="dropdown" aria-expanded="false">About</a>
                             <ul class="dropdown-menu eco-nav-dropdown eco-nav-dropdown-about" id="eco-nav-dropdown-about">
                                 <li class="my-1">
                                     <a class="dropdown-item" href="#">About Us</a>
@@ -2488,9 +2488,8 @@
         </div>
     </div>
     <!-- JS -->
-    <script defer rel="script" type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
-    <script defer rel="script" type="text/javascript" src="js/fontawesome.min.js"></script>
-    <script defer rel="script" type="text/javascript" src="js/slick.min.js"></script>
+    <script defer rel="script" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script defer rel="script" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha384-YGnnOBKslPJVs35GG0TtAZ4uO7BHpHlqJhs0XK3k6cuVb6EBtl+8xcvIIOKV5wB+" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script defer rel="script" type="text/javascript" src="js/scripts.js"></script>
 </body>
 
